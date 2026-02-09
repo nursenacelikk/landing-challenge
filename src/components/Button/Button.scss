@@ -1,0 +1,64 @@
+@import '../../styles/variables';
+
+.btn {
+    // Temel stiller
+    padding: $padding-medium;
+    border: none;
+    border-radius: $border-radius;
+    font-size: $font-size-medium;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all $transition-speed ease;
+    margin: 5px;
+    
+    // Primary variant
+    &--primary {
+        background: $primary-color;
+        color: $white;
+        
+        &:hover {
+            background: $primary-dark;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba($primary-color, 0.3);
+        }
+    }
+    
+    // Secondary variant
+    &--secondary {
+        background: $secondary-color;
+        color: $white;
+        
+        &:hover {
+            background: $secondary-dark;
+        }
+    }
+    
+    // Danger variant
+    &--danger {
+        background: $danger-color;
+        color: $white;
+        
+        &:hover {
+            background: $danger-dark;
+        }
+    }
+    
+    // Large modifier
+    &--large {
+        padding: $padding-large;
+        font-size: $font-size-large;
+    }
+    
+    // Disabled state
+    &:disabled {
+        background: $gray;
+        color: $gray-dark;
+        cursor: not-allowed;
+        opacity: 0.6;
+        
+        &:hover {
+            transform: none;
+            box-shadow: none;
+        }
+    }
+}
